@@ -2,9 +2,7 @@ package br.com.mtzzwr.vagalume_api.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +23,6 @@ import java.util.concurrent.ExecutionException;
 
 import br.com.mtzzwr.vagalume_api.R;
 import br.com.mtzzwr.vagalume_api.service.ArtistService;
-import br.com.mtzzwr.vagalume_api.view.ArtistaActivity;
 import br.com.mtzzwr.vagalume_api.view.DetalhesArtistaActivity;
 
 public class ArtistaFragment extends Fragment implements View.OnClickListener {
@@ -39,7 +36,7 @@ public class ArtistaFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.activity_artista, container, false);
+        View view = inflater.inflate(R.layout.fragment_artista, container, false);
 
         txtPesquisa = view.findViewById(R.id.txtPesquisar);
         btnPesquisa = view.findViewById(R.id.btnPesquisar);

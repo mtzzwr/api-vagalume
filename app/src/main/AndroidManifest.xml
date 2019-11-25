@@ -13,8 +13,6 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".view.DetalhesArtistaActivity" />
-        <activity android:name=".view.ArtistaActivity" />
-        <activity android:name=".view.LyricsActivity" />
         <activity android:name=".MainActivity"></activity>
         <activity
             android:name=".Splash"
