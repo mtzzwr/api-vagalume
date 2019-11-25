@@ -49,7 +49,7 @@ public class DetalhesArtistaActivity extends AppCompatActivity {
         final String views = intent.getStringExtra("views");
         ArrayList<String> listaMus = intent.getStringArrayListExtra("lista");
         txtNome.setText(nome);
-        txtView.setText(views);
+        txtView.setText("Acessos: " + views);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this, R.layout.list_item, listaMus
         );

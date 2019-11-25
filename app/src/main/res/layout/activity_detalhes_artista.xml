@@ -35,7 +35,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtNomeDetalhes"
         android:textAlignment="center"
-        android:text="Número de plays"
         android:fontFamily="sans-serif-condensed"/>
 
 
@@ -46,7 +45,8 @@
         android:layout_below="@id/txtView"
         android:textAlignment="center"
         android:fontFamily="sans-serif-condensed"
-        android:text="Músicas - Clique na música para exibir a letra" />
+        android:text="Músicas - Clique na música para exibir a letra"
+        android:layout_marginBottom="12dp"/>
 
     <ListView
         android:id="@+id/listaMus"

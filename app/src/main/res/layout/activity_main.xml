@@ -6,14 +6,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:background="#DEA51F">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="teste"
-        android:textSize="26sp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bem vindos"
+            android:textSize="26sp"
+            tools:ignore="MissingConstraints"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aqui você pode buscar por Artistas/Bandas e/ou Letras de Músicas"
+            android:textSize="26sp"
+            tools:ignore="MissingConstraints"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <ImageView
+            android:id="@+id/gifHome"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+    </LinearLayout>
+
+
+
 
     <FrameLayout
         android:id="@+id/container"
