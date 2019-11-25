@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#D9CDBF">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".view.LyricsActivity"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar letra de Música"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="24sp"
+            android:layout_margin="30dp"
+            android:textColor="#000"/>
+
+        <EditText
+            android:id="@+id/edtArtista"
+            android:layout_below="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite um cantor(a) ou banda"/>
+
+        <EditText
+            android:id="@+id/edtMusica"
+            android:layout_below="@+id/edtArtista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:hint="Digite uma música"/>
+
+        <Button
+            android:id="@+id/btnBuscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/edtMusica"
+            android:layout_margin="20dp"
+            android:background="#0B0403"
+            android:text="Pesquisar"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/txtNomeMusica"
+            android:layout_below="@+id/btnBuscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/txtNomeArtista"
+            android:layout_below="@+id/txtNomeMusica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_below="@+id/txtNomeArtista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
+

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetalhesArtistaActivity"
+    android:padding="12dp"
+    android:background="#DEA51F">
+
+    <!--<include layout="@layout/toolbar"></include>-->
+
+    <ImageView
+        android:id="@+id/imgArtista"
+        android:layout_width="240dp"
+        android:layout_height="220dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:id="@+id/txtNomeDetalhes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgArtista"
+        android:textAlignment="center" />
+
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNomeDetalhes"
+        android:textAlignment="center" />
+
+
+    <TextView
+        android:id="@+id/txtPrincipaisMus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtView"
+        android:text="Músicas mais ouvidas" />
+
+    <ListView
+        android:id="@+id/listaMus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPrincipaisMus">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/txtAlbuns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listaMus"
+        android:layout_marginTop="20dp"
+        android:text="Albuns" />
+
+    <ListView
+        android:id="@+id/listaAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAlbuns">
+
+    </ListView>
+
+</RelativeLayout>
+
