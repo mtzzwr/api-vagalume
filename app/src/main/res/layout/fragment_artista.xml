@@ -12,7 +12,19 @@
         android:padding="12dp"
         >
 
+        <TextView
+            android:id="@+id/txtFragArtista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar Artista ou Banda"
+            android:layout_margin="30dp"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="24sp"
+            android:textColor="#000"/>
+
         <EditText
+            android:layout_below="@+id/txtFragArtista"
             android:id="@+id/txtPesquisar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -20,7 +32,9 @@
             android:textColor="#000"
             android:textColorHighlight="#000"
             android:textColorHint="#000"
-            android:textColorLink="#000" />
+            android:textColorLink="#000"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_margin="14dp"/>
 
         <Button
             android:id="@+id/btnPesquisar"
@@ -31,13 +45,16 @@
             android:textColor="#fff"
             android:text="Pesquisar"
             android:background="@color/colorPrimaryDark"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_margin="14dp"
             />
 
         <ImageView
             android:id="@+id/img"
             android:layout_width="150dp"
             android:layout_height="120dp"
-            android:layout_below="@+id/btnPesquisar"/>
+            android:layout_below="@+id/btnPesquisar"
+            android:layout_marginLeft="14dp" />
 
         <TextView
             android:id="@+id/txtNome"
@@ -48,7 +65,8 @@
             android:textSize="26dp"
             android:textColor="#000"
             android:textAlignment="center"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"/>
 
         <TextView
             android:id="@+id/lblGenero"
@@ -60,6 +78,7 @@
             android:textColor="#000"
             android:textAlignment="center"
             android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
             />
 
         <TextView
@@ -71,7 +90,8 @@
             android:textSize="18dp"
             android:textColor="#000"
             android:textAlignment="center"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="5dp"
+            />
 
         <TextView
             android:id="@+id/lblMusica"
@@ -83,6 +103,7 @@
             android:textColor="#000"
             android:textAlignment="center"
             android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"
             />
 
         <TextView
@@ -94,7 +115,8 @@
             android:textSize="18dp"
             android:textColor="#000"
             android:textAlignment="center"
-            android:layout_marginBottom="5dp"/>
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed"/>
 
         <Button
             android:layout_below="@+id/img"
@@ -103,7 +125,10 @@
             android:layout_height="wrap_content"
             android:text="Ver detalhes"
             android:textColor="#fff"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
             android:background="@color/colorPrimaryDark"
+            android:fontFamily="sans-serif-condensed"
             />
 
     </RelativeLayout>

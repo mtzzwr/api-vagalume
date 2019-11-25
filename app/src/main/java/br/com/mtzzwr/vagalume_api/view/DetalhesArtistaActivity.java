@@ -1,5 +1,6 @@
 package br.com.mtzzwr.vagalume_api.view;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -50,7 +51,7 @@ public class DetalhesArtistaActivity extends AppCompatActivity {
         txtNome.setText(nome);
         txtView.setText(views);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, listaMus
+                this, R.layout.list_item, listaMus
         );
 
         listaMusica.setAdapter(adapter);
@@ -59,23 +60,24 @@ public class DetalhesArtistaActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                String musica = (String) parent.getItemAtPosition(position);
+                final String musica = (String) parent.getItemAtPosition(position);
 
                 JSONObject retorno = null;
                 try {
                     retorno = new LyricsService(nome, musica).execute().get();
-                    JSONArray array = retorno.getJSONArray("mus");
+                    final JSONArray array = retorno.getJSONArray("mus");
 
                     for(int j = 0; j < array.length(); j++){
 
                         JSONObject object = array.getJSONObject(j);
 
-                        String letra = object.getString("text");
+                        final String letra = object.getString("text");
 
-                        AlertDialog.Builder builder;
+                        final AlertDialog.Builder builder;
                         builder = new AlertDialog.Builder(DetalhesArtistaActivity.this);
                         builder.setTitle(musica);
                         builder.setMessage(letra);
+                        builder.setNegativeButton("Fechar", null);
                         builder.show();
                     }
 
@@ -98,6 +100,33 @@ public class DetalhesArtistaActivity extends AppCompatActivity {
         listaAlbum.setAdapter(adapterAlb);
 
         Picasso.with(DetalhesArtistaActivity.this).load(foto).into(fotoArtista);
+
+        // código que trás a música traduzida, não deu tempo de implementar
+        /* try {
+            JSONObject retornoTr = null;
+            retornoTr = new LyricsService(nome, musica).execute().get();
+
+            final JSONArray array = retornoTr.getJSONArray("mus");
+
+            JSONObject translate = array.getJSONObject(0);
+
+            JSONArray arrayTr = translate.getJSONArray("translate");
+
+            for(int j = 0; j < arrayTr.length(); j++){
+               JSONObject object = arrayTr.getJSONObject(j);
+
+               String letraTr = object.getString("text");
+
+               builder.setMessage(letraTr);
+               Toast.makeText(DetalhesArtistaActivity.this, "" + letraTr, Toast.LENGTH_LONG).show();
+           }
+          } catch (ExecutionException e) {
+                e.printStackTrace();
+          } catch (InterruptedException e) {
+                e.printStackTrace();
+          } catch (JSONException e) {
+                e.printStackTrace();
+          } */
 
     }
 }

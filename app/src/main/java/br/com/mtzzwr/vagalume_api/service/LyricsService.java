@@ -49,9 +49,6 @@ public class LyricsService extends AsyncTask<Void, Void, JSONObject> {
                 resposta.append(scanner.nextLine());
             }
 
-            Gson gson = new Gson();
-            gson.fromJson(resposta.toString(), Artista.class);
-
             try {
                 JSONObject json = new JSONObject(String.valueOf(resposta));
 

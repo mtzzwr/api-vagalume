@@ -13,7 +13,7 @@
 
     <ImageView
         android:id="@+id/imgArtista"
-        android:layout_width="240dp"
+        android:layout_width="match_parent"
         android:layout_height="220dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -25,7 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgArtista"
         android:textAlignment="center"
-        android:textSize="18sp"/>
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-condensed"/>
 
 
     <TextView
@@ -34,7 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtNomeDetalhes"
         android:textAlignment="center"
-        android:text="Número de plays"/>
+        android:text="Número de plays"
+        android:fontFamily="sans-serif-condensed"/>
 
 
     <TextView
@@ -43,13 +45,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/txtView"
         android:textAlignment="center"
-        android:text="Músicas mais escutadas - Clique na música para exibir a letra" />
+        android:fontFamily="sans-serif-condensed"
+        android:text="Músicas - Clique na música para exibir a letra" />
 
     <ListView
         android:id="@+id/listaMus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtPrincipaisMus">
+        android:layout_below="@+id/txtPrincipaisMus"
+        android:fontFamily="sans-serif-condensed">
 
     </ListView>
 
@@ -59,13 +63,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/listaMus"
         android:layout_marginTop="20dp"
-        android:text="Albuns" />
+        android:text="Albuns"
+        android:fontFamily="sans-serif-condensed"/>
 
     <ListView
         android:id="@+id/listaAlbum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtAlbuns">
+        android:layout_below="@+id/txtAlbuns"
+        android:fontFamily="sans-serif-condensed">
 
     </ListView>
 
