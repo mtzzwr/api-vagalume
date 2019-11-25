@@ -175,7 +175,7 @@ public class ArtistaFragment extends Fragment implements View.OnClickListener {
                 String views = rank.getString("views");
                 String position = rank.getString("pos");
 
-                JSONObject topMus = retorno.getJSONObject("toplyrics");
+                JSONObject topMus = retorno.getJSONObject("lyrics");
                 JSONArray itemMus = topMus.getJSONArray("item");
                 getMusicas(itemMus);
                 intent.putStringArrayListExtra("lista", getMusicas(itemMus));

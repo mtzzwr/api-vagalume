@@ -16,7 +16,7 @@
             android:id="@+id/txtPesquisar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Pesquisar"
+            android:hint="Digite um cantor(a) ou banda"
             android:textColor="#000"
             android:textColorHighlight="#000"
             android:textColorHint="#000"

@@ -24,7 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgArtista"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="18sp"/>
 
 
     <TextView
@@ -32,7 +33,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtNomeDetalhes"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:text="Número de plays"/>
 
 
     <TextView
@@ -40,7 +42,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtView"
-        android:text="Músicas mais ouvidas" />
+        android:textAlignment="center"
+        android:text="Músicas mais escutadas - Clique na música para exibir a letra" />
 
     <ListView
         android:id="@+id/listaMus"
