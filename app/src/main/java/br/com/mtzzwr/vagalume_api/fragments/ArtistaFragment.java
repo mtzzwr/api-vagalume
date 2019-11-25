@@ -99,7 +99,7 @@ public class ArtistaFragment extends Fragment implements View.OnClickListener {
 
                             btnDetalhes.setVisibility(View.VISIBLE);
                         }else{
-                            Toast.makeText(getContext(), "Não trouxe nadaaaa!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "Nada foi encontrado :(", Toast.LENGTH_SHORT).show();
                         }
 
                     } catch (InterruptedException e) {

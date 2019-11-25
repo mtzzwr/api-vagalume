@@ -50,23 +50,31 @@ public class LetrasFragment extends Fragment {
                     Toast.makeText(getContext(), "Preencha os campos", Toast.LENGTH_SHORT).show();
                 }else{
                     try {
-                        JSONObject retorno = new LyricsService(require_art, require_mus).execute().get();
-                        JSONArray array = retorno.getJSONArray("mus");
-
-                        for(int j = 0; j < array.length(); j++){
-
-                            // jsonObject que recebe o indice do array
-                            JSONObject object = array.getJSONObject(j);
-
-                            // coloca os dados do array no textView
-                            txtMusica.setText(object.getString("name"));
-                            txtResultado.setText(object.getString("text"));
+                        JSONObject retorno = null;
+                        try {
+                            retorno = new LyricsService(require_art, require_mus).execute().get();
+                        } catch (ExecutionException e) {
+                            e.printStackTrace();
                         }
 
-                        txtArtista.setText(retorno.getString("name"));
+                        if(retorno != null){
+                            JSONArray array = retorno.getJSONArray("mus");
 
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
+                            for(int j = 0; j < array.length(); j++){
+
+                                // jsonObject que recebe o indice do array
+                                JSONObject object = array.getJSONObject(j);
+
+                                // coloca os dados do array no textView
+                                txtMusica.setText(object.getString("name"));
+                                txtResultado.setText(object.getString("text"));
+                            }
+
+                            txtArtista.setText(retorno.getString("name"));
+                        }else{
+                            Toast.makeText(getContext(), "Nada foi encontrado :(", Toast.LENGTH_SHORT).show();
+                        }
+
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     } catch (JSONException e) {
