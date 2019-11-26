@@ -2,6 +2,7 @@ package br.com.mtzzwr.vagalume_api.view;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,13 +25,15 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 import br.com.mtzzwr.vagalume_api.R;
+import br.com.mtzzwr.vagalume_api.fragments.ArtistaFragment;
 import br.com.mtzzwr.vagalume_api.service.LyricsService;
 
-public class DetalhesArtistaActivity extends AppCompatActivity {
+public class DetalhesArtistaActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView txtNome, txtView;
     ImageView fotoArtista;
-    ListView listaMusica, listaAlbum;
+    ListView listaMusica;
+    FloatingActionButton btnVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +44,9 @@ public class DetalhesArtistaActivity extends AppCompatActivity {
         fotoArtista = findViewById(R.id.imgArtista);
         txtView = findViewById(R.id.txtView);
         listaMusica = findViewById(R.id.listaMus);
-        listaAlbum = findViewById(R.id.listaAlbum);
+        btnVoltar = findViewById(R.id.btnVoltar);
+
+        btnVoltar.setOnClickListener(this);
 
         Intent intent = getIntent();
         final String nome = intent.getStringExtra("nome");
@@ -92,41 +97,13 @@ public class DetalhesArtistaActivity extends AppCompatActivity {
             }
         });
 
-        ArrayList<String> listaAlb = intent.getStringArrayListExtra("listaAlb");
-        ArrayAdapter<String> adapterAlb = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, listaAlb
-        );
-
-        listaAlbum.setAdapter(adapterAlb);
-
         Picasso.with(DetalhesArtistaActivity.this).load(foto).into(fotoArtista);
+    }
 
-        // código que trás a música traduzida, não deu tempo de implementar
-        /* try {
-            JSONObject retornoTr = null;
-            retornoTr = new LyricsService(nome, musica).execute().get();
-
-            final JSONArray array = retornoTr.getJSONArray("mus");
-
-            JSONObject translate = array.getJSONObject(0);
-
-            JSONArray arrayTr = translate.getJSONArray("translate");
-
-            for(int j = 0; j < arrayTr.length(); j++){
-               JSONObject object = arrayTr.getJSONObject(j);
-
-               String letraTr = object.getString("text");
-
-               builder.setMessage(letraTr);
-               Toast.makeText(DetalhesArtistaActivity.this, "" + letraTr, Toast.LENGTH_LONG).show();
-           }
-          } catch (ExecutionException e) {
-                e.printStackTrace();
-          } catch (InterruptedException e) {
-                e.printStackTrace();
-          } catch (JSONException e) {
-                e.printStackTrace();
-          } */
-
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.btnVoltar){
+            finish();
+        }
     }
 }

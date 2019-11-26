@@ -137,25 +137,6 @@ public class ArtistaFragment extends Fragment implements View.OnClickListener {
         return null;
     }
 
-    public ArrayList<String> getAlbum(JSONArray array){
-        try {
-
-            ArrayList<String> returnList = new ArrayList<String>();
-
-            for(int j = 0; j < array.length(); j++){
-
-                JSONObject object = array.getJSONObject(j);
-                returnList.add(object.getString("desc"));
-            }
-            return returnList;
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(getContext(), DetalhesArtistaActivity.class);
@@ -179,11 +160,6 @@ public class ArtistaFragment extends Fragment implements View.OnClickListener {
                 JSONArray itemMus = topMus.getJSONArray("item");
                 getMusicas(itemMus);
                 intent.putStringArrayListExtra("lista", getMusicas(itemMus));
-
-                JSONObject album = retorno.getJSONObject("albums");
-                JSONArray itemAlbum = album.getJSONArray("item");
-                getAlbum(itemAlbum);
-                intent.putStringArrayListExtra("listaAlb", getAlbum(itemAlbum));
 
                 intent.putExtra("nome", nome);
                 intent.putExtra("foto", foto);

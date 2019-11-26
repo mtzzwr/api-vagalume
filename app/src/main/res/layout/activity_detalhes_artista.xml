@@ -26,6 +26,7 @@
         android:layout_below="@+id/imgArtista"
         android:textAlignment="center"
         android:textSize="24sp"
+        android:textColor="#000"
         android:fontFamily="sans-serif-condensed"/>
 
 
@@ -35,7 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtNomeDetalhes"
         android:textAlignment="center"
-        android:fontFamily="sans-serif-condensed"/>
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#000"/>
 
 
     <TextView
@@ -46,7 +48,8 @@
         android:textAlignment="center"
         android:fontFamily="sans-serif-condensed"
         android:text="Músicas - Clique na música para exibir a letra"
-        android:layout_marginBottom="12dp"/>
+        android:layout_marginBottom="12dp"
+        android:textColor="#000"/>
 
     <ListView
         android:id="@+id/listaMus"
@@ -57,23 +60,13 @@
 
     </ListView>
 
-    <TextView
-        android:id="@+id/txtAlbuns"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/listaMus"
-        android:layout_marginTop="20dp"
-        android:text="Albuns"
-        android:fontFamily="sans-serif-condensed"/>
-
-    <ListView
-        android:id="@+id/listaAlbum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtAlbuns"
-        android:fontFamily="sans-serif-condensed">
-
-    </ListView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnVoltar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/fechar"
+        android:layout_alignEnd="@id/listaMus"
+        android:layout_alignBottom="@+id/listaMus"/>
 
 </RelativeLayout>
 

@@ -8,8 +8,7 @@
     <RelativeLayout android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        android:padding="12dp"
+        android:padding="8dp"
         >
 
         <TextView
@@ -29,10 +28,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Digite um cantor(a) ou banda"
-            android:textColor="#000"
-            android:textColorHighlight="#000"
-            android:textColorHint="#000"
-            android:textColorLink="#000"
             android:fontFamily="sans-serif-condensed"
             android:layout_margin="14dp"/>
 
