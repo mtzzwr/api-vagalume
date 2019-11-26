@@ -1,11 +1,7 @@
 package br.com.mtzzwr.vagalume_api.service;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
-import com.google.gson.Gson;
-
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -14,8 +10,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
-
-import br.com.mtzzwr.vagalume_api.Artista;
 
 public class LyricsService extends AsyncTask<Void, Void, JSONObject> {
 

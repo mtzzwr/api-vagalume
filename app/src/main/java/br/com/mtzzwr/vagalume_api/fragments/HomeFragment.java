@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
 
 
         Glide.with(this)
-                .load("https://media1.tenor.com/images/15a09f187de5da5ec503a09a9980c37c/tenor.gif?itemid=5538913")
+                .load("https://i.pinimg.com/originals/8e/aa/8f/8eaa8ffb622d3b229abc15d6879bc74c.gif")
                 .into(gif);
 
         return view;

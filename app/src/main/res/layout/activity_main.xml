@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bem vindos"
+            android:text="Bem vindo"
             android:textSize="26sp"
             tools:ignore="MissingConstraints"
             android:textAlignment="center"
@@ -43,6 +43,18 @@
             android:id="@+id/gifHome"
             android:layout_width="match_parent"
             android:layout_height="300dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Comece escolhendo entre as opções no menu abaixo"
+            android:textSize="26sp"
+            tools:ignore="MissingConstraints"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#000"
+            android:layout_margin="14dp"
+            />
 
     </LinearLayout>
 

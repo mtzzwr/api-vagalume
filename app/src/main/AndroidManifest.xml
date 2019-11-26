@@ -13,9 +13,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".view.DetalhesArtistaActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".view.MainActivity"></activity>
         <activity
-            android:name=".Splash"
+            android:name=".view.Splash"
             android:theme="@style/Theme.AppCompat.TelaCheia">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
